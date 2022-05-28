@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SuiteTest]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="AppiumLaunchTest(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.ScrollTest">
+      <class name="test.LogInTest">
         <methods>
-          <include name="scrollTest"/>
-          <include name="afterMethod"/>
+          <include name="logInTestWithOutCredentials"/>
           <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- test.ScrollTest -->
-      <class name="test.ClickTest">
-        <methods>
+          <include name="logInTest" invocation-numbers="0"/>
           <include name="afterMethod"/>
-          <include name="clickTest"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- test.ClickTest -->
+      </class> <!-- test.LogInTest -->
     </classes>
-  </test> <!-- AppiumLaunchTest(failed) -->
-</suite> <!-- Failed suite [SuiteTest] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

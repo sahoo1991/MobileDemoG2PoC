@@ -1,10 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="SuiteTest" verbose="1">
-	<test name="AppiumLaunchTest">
+	<test name="G2PoC Suite">
 		<classes>
-			<class name="test.ClickTest" />
-			<class name="test.ScrollTest"/>
+			<class name="test.LogInTest" />
 		</classes>
 	</test>
 </suite>

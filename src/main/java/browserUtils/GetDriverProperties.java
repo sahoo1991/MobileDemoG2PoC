@@ -21,11 +21,26 @@ public class GetDriverProperties {
 		
 	}
 	
+	public String getAutomationName() throws IOException {
+		Properties prop = getPropertyObject();
+		return prop.getProperty("automationName");
+		
+	}
+	public String getPlatFormName() throws IOException {
+		Properties prop = getPropertyObject();
+		return prop.getProperty("platformName");
+		
+	}
+	public String getAPKInfo() throws IOException {
+		Properties prop = getPropertyObject();
+		return prop.getProperty("apkInfo");
+		
+	}
 	private Properties getPropertyObject() throws IOException {
 		
 		
 		Properties prop = new Properties();
-		String path = Paths.get("").toAbsolutePath().normalize().toString()+"\\mobileConfig.properties";
+		String path = Paths.get("").toAbsolutePath().normalize().toString()+"/mobileConfig.properties";
 		FileInputStream fis = new FileInputStream(path);
 		prop.load(fis);
 		return prop;
