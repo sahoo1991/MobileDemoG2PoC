@@ -11,20 +11,21 @@ import io.appium.java_client.MobileElement;
 import reportsUtil.ExtentLogging;
 
 public class BaseTest {
-	
+
 	public AppiumDriver<MobileElement> driver;
 	public ExtentLogging eLog;
 	public ExtentReports report;
 	public ExtentTest logger;
-	
+
 	@BeforeTest
 	public void beforeTest() {
-		
+		System.out.println("This is before test");
+
 	}
 	@AfterTest
 	public void afterTest() {
-		
+
 	}
-	
+
 
 }
