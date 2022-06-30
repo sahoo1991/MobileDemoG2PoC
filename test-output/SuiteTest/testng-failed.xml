@@ -7,6 +7,10 @@
         <methods>
           <include name="logInTestWithOutCredentials"/>
           <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="logInTest"/>
+          <include name="logInHomePageLabelTest"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- test.LogInTest -->

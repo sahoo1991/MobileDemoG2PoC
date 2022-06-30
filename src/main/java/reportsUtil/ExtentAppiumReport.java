@@ -7,19 +7,19 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentAppiumReport {
-	
+
 	private static ExtentReports report;
-	
+
 	private ExtentAppiumReport() {
-		
+
 	}
-	
-	
+
+
 	public static ExtentReports getExtentReport() {
-		
+
 		synchronized (ExtentAppiumReport.class) {
 			if (report == null) {
-				
+
 				ExtentSparkReporter spark = new ExtentSparkReporter("report.html");
 				String configPath = System.getProperty("user.dir");
 				try {
@@ -27,7 +27,7 @@ public class ExtentAppiumReport {
 				}catch(IOException e) {
 					e.printStackTrace();
 				}
-				
+
 				report = new ExtentReports();
 				report.attachReporter(spark);
 				report.attachReporter(spark);
@@ -36,12 +36,12 @@ public class ExtentAppiumReport {
 				report.setSystemInfo("HostName", "sahoo Testing Academy");
 				report.setSystemInfo("User Name", "Sangrambadi");
 				report.setSystemInfo("Browser Type", "Appium Automation");
-				
+
 			}
 			return report;
 		}
-		
-		
+
+
 	}
 
 }

@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderLogin {
-	
+
 	@DataProvider(name = "LoginDataProvider")
 	public Object[][] getData() throws FileNotFoundException, IOException{
 		XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(new File("/Users/sangrambadi/Downloads/file_example_XLS_10.xls")));
@@ -21,7 +21,7 @@ public class DataProviderLogin {
 			System.out.println(row.getCell(i).toString());
 		}
 		return new Object[][] {};
-		
+
 	}
 
 }
